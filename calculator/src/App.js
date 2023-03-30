@@ -4,8 +4,8 @@ import {useState} from "react";
 function App() {
   
   let testRegex = /\d\.\.|\.\d+\.|\.\./
-  let testRegex2 = /\d\s\*\s\s-\s\s\+\s/
-  let newRegex = /\s\*\s\s-\s/
+  let testRegex2 = /(\d\s(\*|\/|\+)\s\s-\s\s(\+|\*|\/)\s)|(\d*\s(\+|\/|\*)\s\s(\+|\/|\*)\s)|(\s-\s\s-\s)|(\d\s-\s\s\*\s)/
+  let newRegex = /(\s\-\s)|(\s(\*|\/|\+|-)\s\s-\s)/
 
   const [display, setDisplay] = useState(0);
 
