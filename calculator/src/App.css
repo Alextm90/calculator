@@ -1,0 +1,56 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: papayawhip;
+}
+
+#container {
+    display: grid;
+    height: 55vh;
+    width: 23vw;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: 1px solid black;
+  
+}
+
+#display {
+    width: 99.3%;
+    height: 100%;
+    border: 1px solid gray;
+    grid-area: 1/1/1/5;
+    
+}
+
+#divide {
+  grid-area: 2/2/2/3
+}
+
+#multiply {
+ grid-area: 2/3/2/4
+}
+
+#subtract {
+grid-area: 2/4/2/5
+}
+
+#add {
+grid-area: 3/4/3/5
+}
+
+#equals {
+    grid-area: 4/4/6/5
+}
+
+#zero {
+    grid-area: 6/1/7/3;
+    
+}
+
+#decimal {
+    grid-area: 6/3/7/5;
+    
+}
