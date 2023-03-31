@@ -14,43 +14,50 @@ body {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border: 1px solid black;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 255, 0.215);
   
 }
+
 
 #display {
     width: 99.3%;
     height: 100%;
     border: 1px solid gray;
-    grid-area: 1/1/1/5;
-    
+    grid-area: 1/1/1/5;   
 }
 
 #divide {
-  grid-area: 2/2/2/3
+  grid-area: 2/3/2/3
 }
 
 #multiply {
- grid-area: 2/3/2/4
+ grid-area: 2/4/2/4;
+ 
 }
 
 #subtract {
-grid-area: 2/4/2/5
+grid-area: 3/4/4/5
 }
 
 #add {
-grid-area: 3/4/3/5
+grid-area: 4/4/5/5
 }
 
 #equals {
-    grid-area: 4/4/6/5
+    grid-area: 5/4/7/5;
 }
 
 #zero {
-    grid-area: 6/1/7/3;
-    
+    grid-area: 6/1/7/3;   
 }
 
 #decimal {
-    grid-area: 6/3/7/5;
-    
+    grid-area: 6/3/7/4;   
+   
 }
+
+#clear {
+    grid-area: 2/1/2/3
+}
+
