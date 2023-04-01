@@ -9,12 +9,16 @@ function App() {
   let regex4 = /^\s\+\s$|^\s\*\s$|^\s\/\s$|^\s-\s$/
   let regex5 = /\d/
   let replaceRegex1 = /\s\+\s$|\s\/\s$|\s\*\s$/
-  let replaceRegex2 = /(\s\-\s)$|(\s(\*|\/|\+|-)\s\s-\s)/
+  let replaceRegex2 = /(\s\-\s)$|(\s(\*|\/|\+|-)\s\s-\s)$/
 
   const [display, setDisplay] = useState(0);
+  const [history, setHistory] = useState("");
+  const [equal, setEqual] = useState("");
 
   const clearDisplay = () => {
     setDisplay(0);
+    setEqual("");
+    setHistory("");
   };
 
   const setInput = (e) => {
@@ -45,13 +49,16 @@ function App() {
   };
   
   const evaluateStr = () => {
+       setHistory(display)
+       setEqual(" =")
        let ans = eval(display)
        setDisplay(ans)
   }
   return (
     <div className="App">
-      <div id="container">
-       <div id="display">{display}</div>
+       <div id="container">
+        
+       <div id="display"><div id='display-history'>{history}{equal}</div>{display}</div>
        <button id="clear" onClick={clearDisplay}>AC</button>
        <button id="equals" onClick={evaluateStr}>=</button>
        <button id="seven" value={7} onClick={(e) => setInput(e)}>7</button>

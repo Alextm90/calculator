@@ -9,8 +9,8 @@ body {
 
 #container {
     display: grid;
-    height: 55vh;
-    width: 23vw;
+    height: 55vh; /*change back to min-height if need to */
+    width: 23vw; /*change back to min-width if need to */
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border: 1px solid black;
@@ -18,7 +18,6 @@ body {
     background-color: rgba(0, 0, 255, 0.215);
   
 }
-
 
 #display {
     width: 99.3%;
