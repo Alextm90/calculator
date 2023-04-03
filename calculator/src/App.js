@@ -8,6 +8,7 @@ function App() {
   let regex3 = /\d+(\s\+\s\s(\*|\/)\s)|\d+(\s\/\s\s(\*|\+)\s)|\d+(\s\*\s\s(\/|\+)\s)/
   let regex4 = /^\s\+\s$|^\s\*\s$|^\s\/\s$|^\s-\s$/
   let regex5 = /\d/
+  let regex6 = /\+|-|\*|\//
   let replaceRegex1 = /\s\+\s$|\s\/\s$|\s\*\s$/
   let replaceRegex2 = /(\s\-\s)$|(\s(\*|\/|\+|-)\s\s-\s)$/
 
@@ -36,15 +37,19 @@ function App() {
     }
     else if (regex1.test(display + e.target.value) === true || regex1.test(display + e.target.value) === true || regex1.test(display + e.target.value) === true) {
       setDisplay(display)
+      console.log("4")
     }
     else if (display === 0 && e.target.id === "zero") {
       setDisplay(0)
+      console.log("3")
     }
-    else if (display === 0) {
+    else if (display === 0 && regex6.test(e.target.value) === false) {
       setDisplay(e.target.value)
+      console.log("2", e.target.id)
     }
     else {
       setDisplay(display + e.target.value)
+      console.log("1")
     }
   };
   
