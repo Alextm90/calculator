@@ -7,40 +7,66 @@ body {
     background: papayawhip;
 }
 
+#calculator {
+    min-height: 70vh;
+    min-width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+}
+
 #container {
     display: grid;
-    height: 55vh; /*change back to min-height if need to */
-    width: 23vw; /*change back to min-width if need to */
+    gap: .3rem;
+    min-width: 85%;
+    min-height: 65vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    border: 1px solid black;
     border-radius: 2px;
-    background-color: rgba(0, 0, 255, 0.215);
-  
+    margin: 1.65rem;
 }
 
 #display {
-    width: 99.3%;
-    height: 100%;
-    border: 1px solid gray;
-    grid-area: 1/1/1/5;   
+    font-size: 30px;
+    max-width: 100%;
+    height: 95.7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-content: end;
+    grid-area: 1/1/1/5;
+    padding-right: .7rem;
+    background-color: white;
+}
+
+#display-history {
+    font-size: 23px;
+    color: gray;
+    height: 1.5rem;
+    display: flex;
+    justify-content: right;
+    grid-area: 1/1/1/5;
+    z-index: 1;
+    padding: 1rem .7rem 0 0;
+    background-color: white;
 }
 
 #divide {
-  grid-area: 2/3/2/3
+    grid-area: 2/3/2/3
 }
 
 #multiply {
- grid-area: 2/4/2/4;
- 
+    grid-area: 2/4/2/4;
+
 }
 
 #subtract {
-grid-area: 3/4/4/5
+    grid-area: 3/4/4/5
 }
 
 #add {
-grid-area: 4/4/5/5
+    grid-area: 4/4/5/5
 }
 
 #equals {
@@ -48,15 +74,14 @@ grid-area: 4/4/5/5
 }
 
 #zero {
-    grid-area: 6/1/7/3;   
+    grid-area: 6/1/7/3;
 }
 
 #decimal {
-    grid-area: 6/3/7/4;   
-   
+    grid-area: 6/3/7/4;
+
 }
 
 #clear {
     grid-area: 2/1/2/3
 }
-

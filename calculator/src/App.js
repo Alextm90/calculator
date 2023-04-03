@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from "react";
+import { useState } from "react";
 
 function App() {
   
@@ -50,15 +50,15 @@ function App() {
   
   const evaluateStr = () => {
        setHistory(display)
-       setEqual(" =")
-       let ans = eval(display)
-       setDisplay(ans)
+       setEqual(" = ")
+       setDisplay(eval(display))
   }
   return (
     <div className="App">
+      <div id='calculator'>
        <div id="container">
-        
-       <div id="display"><div id='display-history'>{history}{equal}</div>{display}</div>
+       <div id='display-history'>{history}{equal}</div>
+       <div id="display">{display}</div>
        <button id="clear" onClick={clearDisplay}>AC</button>
        <button id="equals" onClick={evaluateStr}>=</button>
        <button id="seven" value={7} onClick={(e) => setInput(e)}>7</button>
@@ -76,7 +76,8 @@ function App() {
        <button id="multiply" value={" * "} onClick={(e) => setInput(e)}>X</button>
        <button id="divide" value={" / "} onClick={(e) => setInput(e)}>/</button>
        <button id="decimal" value={"."} onClick={(e) => setInput(e)}>.</button>
-      </div>
+       </div>
+     </div>
     </div>
   );
 }
