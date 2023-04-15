@@ -24,32 +24,25 @@ function App() {
 
   const setInput = (e) => {
     if (regex4.test(display) === true && regex5.test(e.target.value) === false) {
-      console.log("ok", display)
       setDisplay(e.target.value)
     }
     else if (regex3.test(display + e.target.value) === true) {
-      console.log("yes")
       setDisplay(display.replace(replaceRegex1, e.target.value))
     }
     else if (regex2.test(display + e.target.value) === true) {
-      console.log("pie")
       setDisplay(display.replace(replaceRegex2, e.target.value))
     }
     else if (regex1.test(display + e.target.value) === true || regex1.test(display + e.target.value) === true || regex1.test(display + e.target.value) === true) {
       setDisplay(display)
-      console.log("4")
     }
     else if (display === 0 && e.target.id === "zero") {
       setDisplay(0)
-      console.log("3")
     }
     else if (display === 0 && regex6.test(e.target.value) === false) {
       setDisplay(e.target.value)
-      console.log("2", e.target.id)
     }
     else {
       setDisplay(display + e.target.value)
-      console.log("1")
     }
   };
   
@@ -58,12 +51,15 @@ function App() {
        setEqual(" = ")
        setDisplay(eval(display))
   }
+
   return (
     <div className="App">
       <div id='calculator'>
        <div id="container">
-        <div id='display-history'>{history}{equal}</div>
-        <div id="display">{display}</div>
+        <div id="display-container">
+          <div id='display-history'>{history}{equal}</div>
+          <div id="display">{display}</div>
+        </div>
         <button id="clear" onClick={clearDisplay}>AC</button>
         <button id="equals" onClick={evaluateStr}>=</button>
         <button id="seven" value={7} onClick={(e) => setInput(e)}>7</button>
