@@ -32,7 +32,7 @@ function App() {
     else if (regex2.test(display + e.target.value) === true) {
       setDisplay(display.replace(replaceRegex2, e.target.value))
     }
-    else if (regex1.test(display + e.target.value) === true || regex1.test(display + e.target.value) === true || regex1.test(display + e.target.value) === true) {
+    else if (regex1.test(display + e.target.value) === true) {
       setDisplay(display)
     }
     else if (display === 0 && e.target.id === "zero") {
